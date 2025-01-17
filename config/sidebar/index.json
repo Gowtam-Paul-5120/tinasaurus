@@ -16,6 +16,10 @@
         {
           "document": "docs/use-cases/sales-and-marketing.mdx",
           "_template": "doc"
+        },
+        {
+          "document": "docs/use-cases/test-file.mdx",
+          "_template": "doc"
         }
       ],
       "_template": "category"
