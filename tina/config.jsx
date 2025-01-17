@@ -350,8 +350,8 @@ const SidebarCollection = {
   ui: {
     global: true,
     allowedActions: {
-      create: false,
-      delete: false,
+      create: true,
+      delete: true,
     },
   },
   fields: [
@@ -823,6 +823,10 @@ export default defineConfig({
   branch: "main",
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID, // Get this from tina.io
   token: process.env.NEXT_PUBLIC_TINA_TOKEN, // Get this from tina.io
+  cmsCallback: (cms) => {
+    cms.flags.set("branch-switcher", true); // Optional: Enable branch switcher
+    return cms;
+  },
   build: {
     outputFolder: "admin",
     publicFolder: "static",
@@ -833,7 +837,6 @@ export default defineConfig({
       publicFolder: "static",
     },
   },
-
   schema: {
     collections: [
       DocsCollection,
