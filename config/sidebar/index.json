@@ -20,6 +20,10 @@
         {
           "document": "docs/use-cases/Test-file.mdx",
           "_template": "doc"
+        },
+        {
+          "document": "docs/use-cases/File-1.mdx",
+          "_template": "doc"
         }
       ],
       "_template": "category"
