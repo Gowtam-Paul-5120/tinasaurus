@@ -819,16 +819,17 @@ const PagesCollection = {
   ],
 };
 
-const GitBookCollection = {
-  name: "platformDocs",
-  label: "Platform Docs",
-  path: "gitbook",
-  format: "mdx",
-  fields: [
-    { name: "title", label: "Title", type: "string" },
-    { name: "content", label: "Content", type: "rich-text" },
-  ],
-};
+// const GitBookCollection = {
+//   label: "Use Cases",
+//   name: "use_cases",
+//   nameOverride: "use-cases",
+//   path: "docs/use-cases",
+//   format: "mdx",
+//   fields: [
+//     { name: "title", label: "Title", type: "string" },
+//     { name: "content", label: "Content", type: "rich-text" },
+//   ],
+// };
 
 export default defineConfig({
   branch,
@@ -853,11 +854,7 @@ export default defineConfig({
       PagesCollection,
       SidebarCollection,
       SettingsCollection,
-      GitBookCollection,
+      // GitBookCollection,
     ],
-    cmsCallback: (cms) => {
-      cms.flags.set("branch-switcher", true);
-      return cms;
-    },
   },
 });
