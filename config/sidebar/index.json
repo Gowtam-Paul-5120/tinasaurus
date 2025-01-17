@@ -2,6 +2,17 @@
   "label": "Docs Sidebar",
   "items": [
     {
+      "title": "GitBook Documentation",
+      "link": "generated",
+      "items": [
+        {
+          "document": "docs/use-cases/inventory-management.mdx",
+          "_template": "doc"
+        }
+      ],
+      "_template": "category"
+    },
+    {
       "document": "docs/intro.mdx",
       "_template": "doc"
     },

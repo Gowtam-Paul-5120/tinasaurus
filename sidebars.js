@@ -47,9 +47,9 @@ const getItem = (item) => {
       }
     }
 
-    itemProps.items = item.items.flatMap((item) => {
-      return getItem(item);
-    });
+    itemProps.items = Array.isArray(item.items)
+      ? item.items.flatMap((item) => getItem(item))
+      : [];
   }
 
   if (type === "link") {
@@ -65,9 +65,9 @@ const getItem = (item) => {
 };
 
 const sidebars = {
-  tutorialSidebar: sidebarData.items.flatMap((item) => {
-    return getItem(item);
-  }),
+  tutorialSidebar: Array.isArray(sidebarData.items)
+    ? sidebarData.items.flatMap((item) => getItem(item))
+    : [],
 };
 
 module.exports = sidebars;

@@ -819,6 +819,17 @@ const PagesCollection = {
   ],
 };
 
+const GitBookCollection = {
+  name: "platformDocs",
+  label: "Platform Docs",
+  path: "gitbook",
+  format: "mdx",
+  fields: [
+    { name: "title", label: "Title", type: "string" },
+    { name: "content", label: "Content", type: "rich-text" },
+  ],
+};
+
 export default defineConfig({
   branch,
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID, // Get this from tina.io
@@ -833,6 +844,7 @@ export default defineConfig({
       publicFolder: "static",
     },
   },
+
   schema: {
     collections: [
       DocsCollection,
@@ -841,6 +853,11 @@ export default defineConfig({
       PagesCollection,
       SidebarCollection,
       SettingsCollection,
+      GitBookCollection,
     ],
+    cmsCallback: (cms) => {
+      cms.flags.set("branch-switcher", true);
+      return cms;
+    },
   },
 });
