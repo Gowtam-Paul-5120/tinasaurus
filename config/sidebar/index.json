@@ -16,14 +16,6 @@
         {
           "document": "docs/use-cases/sales-and-marketing.mdx",
           "_template": "doc"
-        },
-        {
-          "document": "docs/use-cases/Test-file.mdx",
-          "_template": "doc"
-        },
-        {
-          "document": "docs/use-cases/File-2.mdx",
-          "_template": "doc"
         }
       ],
       "_template": "category"
