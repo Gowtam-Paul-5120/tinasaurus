@@ -819,20 +819,8 @@ const PagesCollection = {
   ],
 };
 
-// const GitBookCollection = {
-//   label: "Use Cases",
-//   name: "use_cases",
-//   nameOverride: "use-cases",
-//   path: "docs/use-cases",
-//   format: "mdx",
-//   fields: [
-//     { name: "title", label: "Title", type: "string" },
-//     { name: "content", label: "Content", type: "rich-text" },
-//   ],
-// };
-
 export default defineConfig({
-  branch,
+  branch: "main",
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID, // Get this from tina.io
   token: process.env.NEXT_PUBLIC_TINA_TOKEN, // Get this from tina.io
   build: {
@@ -854,7 +842,6 @@ export default defineConfig({
       PagesCollection,
       SidebarCollection,
       SettingsCollection,
-      // GitBookCollection,
     ],
   },
 });
