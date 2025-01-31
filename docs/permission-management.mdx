@@ -1,0 +1,201 @@
+---
+title: Permission Management
+---
+
+# Permission Management
+
+Permission management in the platform provides a robust framework to control access and manage resources effectively. It is divided into **Organization-Level Permissions** and **Workspace-Level Permissions** to ensure streamlined operations and security. This guide explains the roles and permissions structure, empowering administrators to allocate access rights precisely.
+
+---
+
+## **Roles**
+
+The platform supports three primary roles, each designed for specific responsibilities
+
+1. **Admin**
+   - Full access to all organization and workspace features.
+   - Manages users, permissions, workflows, and resources.
+   - Can assign roles to other users.
+2. **User**
+   - Collaborates on resources within assigned workspaces.
+   - Creates, updates, and manages workflows, schemas, and other resources.
+   - Cannot assign roles or manage users.
+3. **Client**
+   - Restricted to consuming resources like APIs and published schemas.
+   - Limited interaction for enhanced security.
+
+---
+
+## **Permissions**
+
+Permissions are categorized into **Organization-Level** and **Workspace-Level** for efficient access control. Each category is further broken down into subcategories for clarity.\
+
+**Permission Assignment**
+
+- **Member Permissions**: Permissions are assigned to individual users based on their roles and responsibilities.
+- **Team Permissions**: Permissions are assigned to a team, automatically granting access to all team members. Teams are ideal for managing permissions in collaborative settings.
+
+---
+
+## **1. Organization-Level Permissions**
+
+**User Management**
+
+| **Permission**  | **Description**                          |
+| --------------- | ---------------------------------------- |
+| Invite User     | Can invite users to the organization.    |
+| Update User     | Can update user information.             |
+| Delete User     | Can delete users from the organization.  |
+| View Users      | Can view the list of organization users. |
+| Restore User    | Can restore deleted users.               |
+| Reactivate User | Can reactivate deactivated users.        |
+
+**Schema Registry**
+
+| **Permission**  | **Description**                             |
+| --------------- | ------------------------------------------- |
+| Approve Schemas | Can approve schema publish requests.        |
+| Create Schemas  | Can create new schemas.                     |
+| Delete Schemas  | Can delete existing schemas.                |
+| Publish Schemas | Can publish schemas for organizational use. |
+| Update Schemas  | Can update existing schemas.                |
+| View Schemas    | Can view all schemas.                       |
+| Export Schemas  | Can export schemas for external use.        |
+
+**API Manager**
+
+| **Permission**                  | **Description**                          |
+| ------------------------------- | ---------------------------------------- |
+| Create Clients                  | Can create new API clients.              |
+| Delete Clients                  | Can delete API clients.                  |
+| Update Clients                  | Can update API client configurations.    |
+| View API Collections            | Can view API collections in the manager. |
+| View Clients                    | Can view client information.             |
+| Delete Published API Collection | Can delete published API collections.    |
+
+**Custom Activities**
+
+| **Permission**     | **Description**                                 |
+| ------------------ | ----------------------------------------------- |
+| Create Activities  | Can create custom activities for organization.  |
+| View Activities    | Can view all custom activities.                 |
+| Update Activities  | Can update custom activities.                   |
+| Delete Activities  | Can delete custom activities.                   |
+| Publish Activities | Can publish custom activities for organization. |
+
+**Library Manager**
+
+| **Permission**     | **Description**                 |
+| ------------------ | ------------------------------- |
+| Release Activities | Can release library activities. |
+| Edit Activities    | Can edit library activities.    |
+| Delete Activities  | Can delete library activities.  |
+
+**General Permissions**
+
+| **Permission** | **Description**            |
+| -------------- | -------------------------- |
+| View Team      | Can view team information. |
+
+---
+
+## **2. Workspace-Level Permissions**
+
+**General Permissions**
+
+| **Permission**    | **Description**                      |
+| ----------------- | ------------------------------------ |
+| Create Workspaces | Can create new workspaces.           |
+| Update Workspace  | Can update workspace configurations. |
+
+**Approve**
+
+| **Permission**   | **Description**                      |
+| ---------------- | ------------------------------------ |
+| Add Approvers    | Can add approvers in workflows.      |
+| Delete Approvers | Can delete approvers in workflows.   |
+| Update Approvers | Can update approver settings.        |
+| List Approvers   | Can list all approvers in workflows. |
+
+**Global Variables**
+
+| **Permission**          | **Description**                   |
+| ----------------------- | --------------------------------- |
+| Create Global Variables | Can create global variables.      |
+| Delete Global Variables | Can delete global variables.      |
+| Update Global Variables | Can update global variables.      |
+| View Global Variables   | Can view global variables.        |
+| Secure With Vault       | Can secure variables with vaults. |
+
+**Lookup**
+
+| **Permission**        | **Description**                     |
+| --------------------- | ----------------------------------- |
+| Create Lookup         | Can create lookup tables.           |
+| Delete Lookup         | Can delete lookup tables.           |
+| Update Lookup         | Can update lookup tables.           |
+| View Lookup           | Can view lookup tables.             |
+| Export Lookup         | Can export lookup tables.           |
+| Update Lookup Storage | Can update lookup storage settings. |
+
+**Application**
+
+| **Permission**      | **Description**                           |
+| ------------------- | ----------------------------------------- |
+| Create Applications | Can create applications in the workspace. |
+| Delete Applications | Can delete applications in the workspace. |
+| Update Applications | Can update applications in the workspace. |
+| View Applications   | Can view workspace applications.          |
+
+**Workflows**
+
+| **Permission**               | **Description**                                |
+| ---------------------------- | ---------------------------------------------- |
+| Change Status                | Can change status of deployed workflows.       |
+| Delete (Deploy Workflows)    | Can delete deployed workflows.                 |
+| Delete (Published Workflows) | Can delete published workflows.                |
+| Delete (General Workflows)   | Can delete workflows in general.               |
+| Deploy                       | Can deploy workflows in workspace.             |
+| Promote                      | Can promote workflows to higher environments.  |
+| Publish                      | Can publish workflows.                         |
+| Redeploy                     | Can redeploy workflows in workspace.           |
+| Restore                      | Can restore published workflows.               |
+| Rollback                     | Can rollback workflows.                        |
+| Update Workflows             | Can update workflows in the workspace.         |
+| Configure Deploy Variables   | Can configure deployment variables.            |
+| Configure Secret Variables   | Can configure secret variables for deployment. |
+
+**Vault**
+
+| **Permission** | **Description**                       |
+| -------------- | ------------------------------------- |
+| Create Vault   | Can create vaults for secure storage. |
+| Delete Vault   | Can delete vaults.                    |
+| Update Vault   | Can update vault configurations.      |
+| View Vault     | Can view vault configurations.        |
+
+**Test Dashboard**
+
+| **Permission** | **Description**                                   |
+| -------------- | ------------------------------------------------- |
+| Create Tests   | Can create test cases in development/production.  |
+| Delete Tests   | Can delete test cases in development/production.  |
+| Execute Tests  | Can execute test cases in development/production. |
+| Update Tests   | Can update test cases in development/production.  |
+| View Tests     | Can view test cases in development/production.    |
+
+**Metrics Dashboard**
+
+| **Permission** | **Description**                 |
+| -------------- | ------------------------------- |
+| View Metrics   | Can view metrics in dashboards. |
+
+**Members and Teams**
+
+| **Permission** | **Description**                        |
+| -------------- | -------------------------------------- |
+| Add Members    | Can add members to the workspace.      |
+| Edit Members   | Can edit workspace members.            |
+| Delete Members | Can delete members from the workspace. |
+| View Members   | Can view workspace members.            |
+| View Teams     | Can view teams within the workspace.   |

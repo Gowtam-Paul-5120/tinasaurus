@@ -1,0 +1,135 @@
+---
+title: Creating a Custom Activity
+---
+
+# Creating a Custom Activity
+
+The **Custom Activity** feature allows you to create reusable activities tailored to your specific business needs. These activities can encapsulate custom logic, integrations, or data transformations, enabling efficient workflows and enhanced productivity. Custom activities can be simple or involve advanced integrations like subflows, resources, and lookups.
+
+---
+
+## Getting Started
+
+Follow these steps to create and configure a custom activity in PlatformNX
+
+### **1. Prepare the Workspace**
+
+- Create a new workspace dedicated to managing your bundle applications.
+- Inside this workspace, create a **Bundle type application**, which is required for managing custom activities.
+
+  _(Add a screenshot or GIF showing the creation of a Bundle application.)_
+
+### **2. Build or Import Workflow**
+
+- Design or import the workflow that includes the activity you want to save as a custom activity.
+
+### **3. Test the Workflow**
+
+- Deploy and test the workflow to ensure that it functions as intended and has no errors.
+
+### **4. Save Custom Activity**
+
+- Right-click on the activity in your workflow that you wish to save and select **Save as Custom Activity**.
+
+  _(Include a screenshot or GIF showing this step.)_
+
+### **5. Add Custom Activity Details**
+
+- Fill in the following details
+
+  - **Name:** A unique identifier for your activity.
+  - **Group:** Select an existing group or create a new one.
+  - **Description:** Add a clear and relevant description.
+  - **Access Level:** By default, activities are accessible across the organization.
+  - **Icon:** Choose from existing icons or upload a custom SVG file (only SVG format is supported).
+
+  _(Insert a screenshot or GIF of the form for entering these details.)_
+
+### **6. Configure Layout**
+
+- In the **Configuration** step
+
+  - All fields are hidden by default. Use the layout builder to drag and drop necessary fields for user customization.
+  - **Note:** Input and Output tabs are mandatory and cannot be hidden.
+
+  _(Add a screenshot or GIF of the layout builder in action.)_
+
+### **7. Review and Save**
+
+- After configuring the fields, click **Next** to review the activity.
+- Once reviewed, click **Save** to make the custom activity available across your organization.
+
+---
+
+## Save a Custom Activity Using Subflows and Resources
+
+For advanced configurations, you can create custom activities using subflows and resources. Here’s how
+
+### **1. Create a Workflow with Subflow**
+
+- Design a workflow where the subflow activity calls the specific workflow you want to save as a custom activity.
+
+### **2. Configure Fields**
+
+- Use the activity builder to configure the custom activity
+
+  - Hide unnecessary fields from the end-user.
+  - Include resource fields by dragging them into the layout. These fields must be configured by the user.
+
+  _(Insert a screenshot or GIF showing how to configure fields.)_
+
+### **3. Review and Save**
+
+- After configuration, click **Next** to review the activity.
+- Once the review is complete, save the activity to make it available for use across the organization.
+
+---
+
+#### Notes for Advanced Configurations
+
+1. **Using Lookup Resources**
+   - When a lookup resource is used, users can hover over the info icon to view column details defined during the custom activity creation.
+2. **Restrictions on Lookups**
+   - Lookups as functions are not supported.
+   - Lookups used as resources must exactly replicate the original configuration, including all keys, columns, and column types.
+
+---
+
+## Scope and Considerations
+
+### **Supported Activities**
+
+- **Rest Service**
+- **RestClient**
+- **Mapper**
+- **Update Workflow Variable**
+- **Subflow**
+- **Lookup**
+
+### **Limitations**
+
+- Editing custom activities is not supported.
+- Variables cannot be used within custom activities.
+- Lookups as functions are not supported.
+
+### **Organizational Impact**
+
+- Saved custom activities are accessible across the organization, enabling consistency.
+- Admins can create custom activities by default.
+
+### **Subflow Limitations**
+
+- Nested subflow activities are limited to 2 levels.
+
+### **Lookup Restrictions**
+
+- Resources must exactly replicate the original lookups, including keys, columns, and column types.
+
+---
+
+## Best Practices
+
+1. **Use a Dedicated Workspace**
+   - Create a separate workspace to organize and manage all your custom activities effectively.
+2. **Create Separate Applications**
+   - Use a new application for each custom activity to maintain modularity and avoid conflicts.

@@ -1,0 +1,51 @@
+---
+title: Configure Your Workflow
+---
+
+# Configure Your Workflow
+
+### **1.** Set Up the REST Service Trigger
+
+1. Click on the **Select Trigger** in the Canvas area.\
+   The **Select a Trigger** modal appears.
+2. Select **RESTService** and click **Save**.\
+   The **RESTService** trigger is added to the workflow.
+3. In the **REST Service Configuration** panel, click on the **Configure It Yourself** menu card.\
+   The RESTService Configuration menu appears.
+4. Fill in the required details in the provided fields, such as the **Path**.
+5. Click **Save** to apply the configuration.
+
+<figure>
+  <img src="/img/assets/Restservice.gif" alt=""></img>
+  <figcaption></figcaption>
+</figure>
+
+<figure>
+  <img src="/img/assets/Screenshot-2024-11-19-185612.png" alt=""></img>
+  <figcaption></figcaption>
+</figure>
+
+### **2.** Configure the Response Activity
+
+1. Navigate to the **Activity** tab on the left sidebar menu.
+2. Expand the **Common** folder.
+3. Drag and drop the **Response** activity onto the **Canvas** area.
+4. Click on the **Input** tab of the **Response** activity to configure it.
+5. In the **Target** panel, hover over the **body** object and click on the **ellipsis (⋯)**.
+6. A context menu appears. Click **Expand**.\
+   The **Add a Schema** modal appears.
+7. Click **Search Registry** and search for the **"message"** schema.
+8. Select **message** and click **Import** to import the schema.
+9. In the **Input** tab Expand the **body** object.
+10. In the **Mapping Expression** of the **message** node, enter a simple message, such as `"Hello World"`.
+11. Click **Save** to apply the configuration.
+
+<figure>
+  <img src="/img/assets/responces-(1).gif" alt=""></img>
+  <figcaption></figcaption>
+</figure>
+
+<figure>
+  <img src="/img/assets/message.gif" alt=""></img>
+  <figcaption></figcaption>
+</figure>

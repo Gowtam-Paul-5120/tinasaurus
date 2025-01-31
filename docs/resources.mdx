@@ -1,0 +1,111 @@
+---
+title: Resources
+---
+
+# Resources
+
+A **Resource** is a reusable configuration that provides access to external systems, APIs, or services. It centralizes commonly used configurations, like database connections or API credentials, simplifying workflow management.
+
+---
+
+### **1. Creating a Resource**
+
+To create a resource
+
+1. Go to the **Resources** section and click **+ New Resource**.
+2. Select the type (e.g., Auth,ABS Connection).
+3. Fill in the required details (e.g., name, clientId,clientSecret).
+4. Click **Save**.
+
+<figure>
+  <img src="/img/assets/Create-resource.gif" alt=""></img>
+  <figcaption></figcaption>
+</figure>
+
+---
+
+### **2. Renaming a Resource**
+
+To rename a resource
+
+1. Go to the **Resources** section and click the **ellipsis (⋮)** next to the resource.
+2. Select **Rename**, enter the new name, and confirm.
+
+<figure>
+  <img src="/img/assets/Renaming-Resource.gif" alt=""></img>
+  <figcaption></figcaption>
+</figure>
+
+---
+
+### **3. Deleting a Resource**
+
+To delete a resource
+
+1. Go to the **Resources** section and click the **ellipsis (⋮)** next to the resource.
+2. Select **Delete** and confirm in the popup.
+
+**Note:** This action is permanent. Export the resource if you need a backup before deleting.
+
+<figure>
+  <img src="/img/assets/Delete-Resource.gif" alt=""></img>
+  <figcaption></figcaption>
+</figure>
+
+---
+
+### **4. Exporting a Resource**
+
+To export a resource
+
+1. Go to the **Resources** section and click the **ellipsis (⋮)** next to the resource.
+2. Select **Export** and save the file.
+
+<figure>
+  <img src="/img/assets/Export-Resource (1).gif" alt=""></img>
+  <figcaption></figcaption>
+</figure>
+
+---
+
+### **5. Importing a Resource**
+
+You can import resources individually into an application to restore configurations or share them across environments.
+
+**Steps**
+
+1. Go to the **Resources** section of your application.
+2. Click the **Import Resource** button.
+3. Upload the resource file from your system.
+4. Confirm the import process. The resource will now appear in your list.
+
+**Note:** Ensure the resource file matches your platform environment to avoid compatibility issues.
+
+<figure>
+  <img src="/img/assets/Import-Resource.gif" alt=""></img>
+  <figcaption></figcaption>
+</figure>
+
+---
+
+### **6. How to Use a Resource**
+
+To use a resource in a workflow
+
+1. Open the workflow and drag an activity (e.g., StreamReader, REST Client) onto the canvas.
+2. In the activity settings, select the resource from the **Resource Dropdown**.
+3. Configure any additional parameters as needed.
+4. Save the workflow and test.
+
+<figure>
+  <img src="/img/assets/How-to-use-Resource.gif" alt=""></img>
+  <figcaption></figcaption>
+</figure>
+
+---
+
+### **7. Best Practices**
+
+- **Descriptive Names**: Use clear names to identify resource purposes easily.
+- **Validate Imports**: Ensure imported resources match your environment.
+- **Backup Resources**: Export important resources regularly for recovery.

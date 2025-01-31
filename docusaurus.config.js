@@ -120,7 +120,22 @@ const config = {
       }),
     ],
   ],
-
+  plugins: [
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      {
+        hashed: true,
+      },
+    ],
+    [
+      "docusaurus-biel",
+      {
+        project: "bs95gvpsn7",
+        headerTitle: "Biel.ai chatbot",
+        version: "latest",
+      },
+    ],
+  ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({

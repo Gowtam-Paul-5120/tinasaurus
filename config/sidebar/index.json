@@ -2,66 +2,170 @@
   "label": "Docs Sidebar",
   "items": [
     {
-      "document": "docs/intro.mdx",
+      "document": "docs/welcome-to-platformnx.mdx",
       "_template": "doc"
     },
     {
-      "title": "Tutorial - Basics",
-      "link": "generated",
+      "title": "Introduction",
+      "link": "doc",
+      "docLink": "docs/introduction.mdx",
       "items": [
         {
-          "document": "docs/tutorial-basics/create-a-page.mdx",
+          "document": "docs/what-is-platformnx.mdx",
           "_template": "doc"
         },
         {
-          "document": "docs/tutorial-basics/create-a-document.mdx",
+          "document": "docs/components-of-an-application.mdx",
           "_template": "doc"
         },
         {
-          "document": "docs/tutorial-basics/create-a-blog-post.mdx",
+          "document": "docs/platformnx-high-level-flow.mdx",
           "_template": "doc"
         },
         {
-          "document": "docs/tutorial-basics/deploy-your-site.mdx",
+          "document": "docs/platformnx-user-profiles.mdx",
           "_template": "doc"
         },
         {
-          "document": "docs/tutorial-basics/congratulations.mdx",
+          "document": "docs/key-features.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/terminology.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/documentation-and-accessibility-standards.mdx",
           "_template": "doc"
         }
       ],
       "_template": "category"
     },
     {
-      "title": "Tutorial - Extras",
-      "link": "generated",
+      "title": "PlatformNx Use Cases",
+      "link": "doc",
+      "docLink": "docs/use-cases.mdx",
       "items": [
         {
-          "document": "docs/tutorial-extras/manage-docs-versions.mdx",
+          "document": "docs/hrms.mdx",
           "_template": "doc"
         },
         {
-          "document": "docs/tutorial-extras/translate-your-site.mdx",
+          "document": "docs/inventory-management.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/sales-and-marketing.mdx",
           "_template": "doc"
         }
       ],
       "_template": "category"
     },
     {
-      "title": "Nested Link",
-      "link": "none",
+      "title": "Building Your Frist Workflow",
+      "link": "doc",
+      "docLink": "docs/building-your-first-workflow.mdx",
       "items": [
         {
-          "title": "Level 2",
-          "link": "none",
+          "document": "docs/before-you-start.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/create-your-first-workflow.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/configure-your-workflow.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/publish-deploy-and-test-the-workflow.mdx",
+          "_template": "doc"
+        }
+      ],
+      "_template": "category"
+    },
+    {
+      "title": "Working with Workspaces",
+      "link": "doc",
+      "docLink": "docs/working-with-workspaces.mdx",
+      "items": [
+        {
+          "document": "docs/accessing-workspaces.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/creating-a-workspace.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/workspace-settings.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/deleting-a-workspace.mdx",
+          "_template": "doc"
+        },
+        {
+          "title": "Managing Workspace-Level Entities",
+          "link": "generated",
+          "docLink": "docs/managing-workspace-level-entities.mdx",
           "items": [
             {
-              "title": "Level 3",
-              "link": "none",
+              "title": "Managing Lookup Values",
+              "link": "doc",
+              "docLink": "docs/managing-lookup-values.mdx",
               "items": [
                 {
-                  "document": "docs/test-page.mdx",
-                  "label": "",
+                  "document": "docs/creating-a-lookup-table.mdx",
+                  "_template": "doc"
+                },
+                {
+                  "document": "docs/using-lookup-tables.mdx",
+                  "_template": "doc"
+                },
+                {
+                  "document": "docs/exporting-a-lookup-table.mdx",
+                  "_template": "doc"
+                },
+                {
+                  "document": "docs/deleting-a-lookup-table.mdx",
+                  "_template": "doc"
+                }
+              ],
+              "_template": "category"
+            },
+            {
+              "title": "Managing Secrets",
+              "link": "doc",
+              "docLink": "docs/managing-secrets.mdx",
+              "items": [
+                {
+                  "document": "docs/adding-a-vault.mdx",
+                  "_template": "doc"
+                },
+                {
+                  "document": "docs/editing-and-deleting-a-vault.mdx",
+                  "_template": "doc"
+                }
+              ],
+              "_template": "category"
+            },
+            {
+              "title": "Managing Certificates",
+              "link": "generated",
+              "docLink": "docs/managing-certificates.mdx",
+              "items": [
+                {
+                  "document": "docs/creating-a-certificate.mdx",
+                  "_template": "doc"
+                },
+                {
+                  "document": "docs/editing-a-certificate.mdx",
+                  "_template": "doc"
+                },
+                {
+                  "document": "docs/deleting-a-certificate.mdx",
                   "_template": "doc"
                 }
               ],
@@ -74,9 +178,392 @@
       "_template": "category"
     },
     {
-      "title": "Tina.io",
-      "href": "https://tina.io/",
-      "_template": "link"
+      "title": "Working with Applications",
+      "link": "doc",
+      "docLink": "docs/working-with-applications.mdx",
+      "items": [
+        {
+          "document": "docs/managing-applications.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/exporting-an-application.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/how-to-save-an-application-as-an-application-template.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/importing-artifacts-into-an-application.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/archiving-an-application.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/resources.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/schemas.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/variables.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/profiles.mdx",
+          "_template": "doc"
+        }
+      ],
+      "_template": "category"
+    },
+    {
+      "document": "docs/working-with-application-and-workflow-templates.mdx",
+      "_template": "doc"
+    },
+    {
+      "title": "Working with Workflows",
+      "link": "doc",
+      "docLink": "docs/working-with-workflows.mdx",
+      "items": [
+        {
+          "title": "Managing Workflows",
+          "link": "doc",
+          "docLink": "docs/managing-workflows.mdx",
+          "items": [
+            {
+              "document": "docs/transition-lines.mdx",
+              "_template": "doc"
+            },
+            {
+              "title": "Mapping",
+              "link": "doc",
+              "docLink": "docs/mapping.mdx",
+              "items": [
+                {
+                  "document": "docs/allof-and-anyof.mdx",
+                  "_template": "doc"
+                },
+                {
+                  "document": "docs/conditional-mapping.mdx",
+                  "_template": "doc"
+                },
+                {
+                  "document": "docs/mapping-types-and-usage.mdx",
+                  "_template": "doc"
+                },
+                {
+                  "document": "docs/anonymous-array.mdx",
+                  "_template": "doc"
+                }
+              ],
+              "_template": "category"
+            },
+            {
+              "title": "Groups",
+              "link": "doc",
+              "docLink": "docs/groups.mdx",
+              "items": [
+                {
+                  "document": "docs/for-each-loop.mdx",
+                  "_template": "doc"
+                },
+                {
+                  "document": "docs/while-loop.mdx",
+                  "_template": "doc"
+                },
+                {
+                  "document": "docs/repeat-until-true-rut-loop.mdx",
+                  "_template": "doc"
+                },
+                {
+                  "document": "docs/parallel.mdx",
+                  "_template": "doc"
+                },
+                {
+                  "document": "docs/advanced-configuration.mdx",
+                  "_template": "doc"
+                }
+              ],
+              "_template": "category"
+            },
+            {
+              "document": "docs/publishing-workflows.mdx",
+              "_template": "doc"
+            },
+            {
+              "document": "docs/deploying-workflows.mdx",
+              "_template": "doc"
+            },
+            {
+              "document": "docs/promoting-and-rollbacking-workflows.mdx",
+              "_template": "doc"
+            },
+            {
+              "document": "docs/testing-a-workflow.mdx",
+              "_template": "doc"
+            },
+            {
+              "document": "docs/exporting-a-workflow.mdx",
+              "_template": "doc"
+            }
+          ],
+          "_template": "category"
+        },
+        {
+          "document": "docs/creating-a-workflow-template.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/creating-and-using-a-subflow.mdx",
+          "_template": "doc"
+        }
+      ],
+      "_template": "category"
+    },
+    {
+      "title": "Working with Activities",
+      "link": "doc",
+      "docLink": "docs/working-with-activities.mdx",
+      "items": [
+        {
+          "title": "Seeded Activities",
+          "link": "generated",
+          "items": [
+            {
+              "title": "Common Activities",
+              "link": "generated",
+              "items": [
+                {
+                  "document": "docs/update-workflow-variable-updatewfvariable.mdx",
+                  "_template": "doc"
+                },
+                {
+                  "document": "docs/log.mdx",
+                  "_template": "doc"
+                },
+                {
+                  "document": "docs/generateerror.mdx",
+                  "_template": "doc"
+                },
+                {
+                  "document": "docs/lookup.mdx",
+                  "_template": "doc"
+                },
+                {
+                  "document": "docs/lookupupsert.mdx",
+                  "_template": "doc"
+                },
+                {
+                  "document": "docs/subflow.mdx",
+                  "_template": "doc"
+                },
+                {
+                  "document": "docs/mapper.mdx",
+                  "_template": "doc"
+                },
+                {
+                  "document": "docs/sendtoengage.mdx",
+                  "_template": "doc"
+                },
+                {
+                  "document": "docs/schedule.mdx",
+                  "_template": "doc"
+                },
+                {
+                  "document": "docs/response.mdx",
+                  "_template": "doc"
+                },
+                {
+                  "document": "docs/end.mdx",
+                  "_template": "doc"
+                }
+              ],
+              "_template": "category"
+            },
+            {
+              "title": "HTTP Activities",
+              "link": "generated",
+              "items": [
+                {
+                  "document": "docs/restservice.mdx",
+                  "_template": "doc"
+                },
+                {
+                  "document": "docs/restclient.mdx",
+                  "_template": "doc"
+                },
+                {
+                  "document": "docs/webhook.mdx",
+                  "_template": "doc"
+                }
+              ],
+              "_template": "category"
+            }
+          ],
+          "_template": "category"
+        },
+        {
+          "document": "docs/creating-a-custom-activity.mdx",
+          "_template": "doc"
+        }
+      ],
+      "_template": "category"
+    },
+    {
+      "title": "Using the Library",
+      "link": "doc",
+      "docLink": "docs/using-the-library.mdx",
+      "items": [
+        {
+          "document": "docs/managing-your-artifacts.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/managing-your-templates.mdx",
+          "_template": "doc"
+        }
+      ],
+      "_template": "category"
+    },
+    {
+      "title": "API Manager",
+      "link": "doc",
+      "docLink": "docs/api-manager.mdx",
+      "items": [
+        {
+          "document": "docs/creating-an-api-collection.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/publishing-api-collections.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/update-the-api-collection.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/view-published-collections.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/creating-client-profiles.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/distributing-access-tokens.mdx",
+          "_template": "doc"
+        }
+      ],
+      "_template": "category"
+    },
+    {
+      "title": "Working with the Schema Registry",
+      "link": "doc",
+      "docLink": "docs/working-with-the-schema-registry.mdx",
+      "items": [
+        {
+          "document": "docs/managing-schemas.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/importing-and-exporting-schemas.mdx",
+          "_template": "doc"
+        }
+      ],
+      "_template": "category"
+    },
+    {
+      "document": "docs/using-custom-attributes-in-workflows.mdx",
+      "_template": "doc"
+    },
+    {
+      "title": "Monitoring, Troubleshooting, and Reporting",
+      "link": "generated",
+      "items": [
+        {
+          "document": "docs/how-metrics-and-traces-work-together.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/metrics-to-be-merged.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/analyzing-application-usage-and-related-data.mdx",
+          "_template": "doc"
+        },
+        {
+          "title": "Deployment Dashboard - TBD",
+          "link": "generated",
+          "items": [
+            {
+              "document": "docs/scheduler-and-queue-monitoring.mdx",
+              "_template": "doc"
+            }
+          ],
+          "_template": "category"
+        }
+      ],
+      "_template": "category"
+    },
+    {
+      "title": "Administering PlatformNX",
+      "link": "generated",
+      "items": [
+        {
+          "title": "Configuring Workspace Settings",
+          "link": "generated",
+          "items": [
+            {
+              "document": "docs/workspace-general-settings.mdx",
+              "_template": "doc"
+            },
+            {
+              "document": "docs/api-collection-settings.mdx",
+              "_template": "doc"
+            }
+          ],
+          "_template": "category"
+        },
+        {
+          "title": "Configuring Organization Settings",
+          "link": "generated",
+          "items": [
+            {
+              "title": "Managing Members",
+              "link": "doc",
+              "docLink": "docs/managing-members.mdx",
+              "items": [
+                {
+                  "document": "docs/permission-management.mdx",
+                  "_template": "doc"
+                }
+              ],
+              "_template": "category"
+            },
+            {
+              "document": "docs/managing-teams.mdx",
+              "_template": "doc"
+            },
+            {
+              "document": "docs/managing-attribute-tags.mdx",
+              "_template": "doc"
+            }
+          ],
+          "_template": "category"
+        }
+      ],
+      "_template": "category"
+    },
+    {
+      "document": "docs/contact-us.mdx",
+      "_template": "doc"
     }
   ]
 }

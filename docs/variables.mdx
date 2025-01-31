@@ -1,0 +1,143 @@
+---
+title: Variables
+---
+
+# Variables
+
+Variables are placeholders used to store and manage data within workflows. In our system, variables are **application-level**, meaning they are shared and accessible across all workflows within an application.
+
+---
+
+### **1.Create a Variable**
+
+To create a variable, follow these steps
+
+1. **Navigate to the Variables Section**
+   - Open the **Variables** section in the application dashboard.
+2. **Click Create Variable**
+   - Select the **Create Variable** option to start the process.
+3. **Define the Group**
+   - In the **Group** field, specify a group name for the variable (e.g., `UserDetails`, `OrderManagement`).
+   - If the group already exists, select it from the dropdown. Otherwise, a new group will be created.
+4. **Define the Variable**
+   - **Name**: Use a clear, descriptive name for the variable (e.g., `userAge`, `orderTotal`).
+   - **Type**: Select one of the available types (e.g., String, Number, Integer, Boolean, Secret).
+5. **Automatic Save**
+   - Once the variable is defined, it is saved automatically. No further action is required.
+
+<figure>
+  <img src="/img/assets/Variables-Create.gif" alt=""></img>
+  <figcaption></figcaption>
+</figure>
+
+---
+
+### **2. How to Use Variables**
+
+Variables can be dynamically applied in workflows by directly mapping or dragging and dropping into activity input fields. Here's how
+
+**Drag and Drop into Input Fields**
+
+1. **Open the Activity Configuration**
+   - Navigate to the activity in the workflow canvas and open its configuration panel.
+2. **Drag and Drop Variables**
+   - From the list of available variables, drag the desired variable and drop it directly into the relevant input field.
+
+<figure>
+  <img src="/img/assets/Variables-Drag-n-Drop.gif" alt=""></img>
+  <figcaption></figcaption>
+</figure>
+
+**Typing Variables in Input Fields**
+
+1. **Identify the Input Field**
+   - Locate the input field in the activity configuration where the variable is needed.
+2. **Use Variable Syntax**
+   - Type the variable in the format `${group.variablename}`.
+   - Example: To use a variable `userAge` in the `UserDetails` group, type `${UserDetails.userAge}`.
+
+**Mapping Through Input Source Tabs**
+
+1. **Map Variables**
+   - Use variables directly from the available list to map them into the corresponding input fields.
+
+<figure>
+  <img src="/img/assets/Variables-Mapping.gif" alt=""></img>
+  <figcaption></figcaption>
+</figure>
+
+These features allow seamless integration of variables into activities, ensuring dynamic and efficient workflows.
+
+---
+
+### **3. Import a Variable Group**
+
+Variable groups can be imported to quickly replicate configurations or integrate with other workflows. Here’s how
+
+1. **Navigate to the Variables Section**
+   - Open the **Variables** section in the application dashboard.
+2. **Click Import**
+   - Select the **Import** option and upload the `.yml` file containing the variable group.
+3. **Resolve Conflicts**
+   - If the imported group has the same name as an existing group
+     - **Replace**: Overwrite the existing group with the imported one.
+     - **Make a Copy**: Create a new group with a modified name to avoid conflicts.
+
+<figure>
+  <img src="/img/assets/Variables-Import.gif" alt=""></img>
+  <figcaption></figcaption>
+</figure>
+
+---
+
+### **4. Export a Variable Group**
+
+Exporting variable groups allows you to back up or share configurations. Follow these steps
+
+1. **Navigate to the Variables Section**
+   - Open the **Variables** section in the application dashboard.
+2. **Select a Group**
+   - Choose the variable group you wish to export.
+3. **Export Group**
+   - Click the **Export** button. The group will be downloaded as a `.yml` file.
+
+<figure>
+  <img src="/img/assets/Variables-Export.gif" alt=""></img>
+  <figcaption></figcaption>
+</figure>
+
+---
+
+### **5. Delete a Variable**
+
+To delete a variable
+
+1. **Open the Variables Section**
+   - Navigate to the **Variables** tab in the application.
+2. **Locate the Variable**
+   - Find the variable in the corresponding group.
+3. **Delete the Variable**
+   - Click the **Delete** button next to the variable.
+   - Confirm your action in the popup.
+4. **Verify Workflows**
+   - Check workflows to ensure no dependencies rely on the deleted variable.
+
+<figure>
+  <img src="/img/assets/Variables-Delete.gif" alt=""></img>
+  <figcaption></figcaption>
+</figure>
+
+---
+
+### **Best Practices for Managing Variables**
+
+1. **Organize with Groups**
+   - Group related variables for improved clarity and management.
+2. **Use Clear Naming Conventions**
+   - Names should clearly indicate the purpose of the variable (e.g., `orderStatus`, `isUserActive`).
+3. **Validate Before Deletion**
+   - Ensure no workflows depend on a variable before deleting it.
+4. **Set Default Values**
+   - Define default values for variables that require consistent initialization.
+5. **Leverage Import/Export**
+   - Use the import/export feature to quickly replicate or back up variable groups.

@@ -1,0 +1,35 @@
+---
+title: Conditional Mapping
+---
+
+# Conditional Mapping
+
+Conditional mapping in the platform enables flexible and dynamic data processing for **JSON schemas**. By supporting robust mapping techniques, the platform simplifies complex operations and ensures seamless data transformations. The platform supports three types of conditional mappings
+
+## **1. If-Else Condition**
+
+- **Description**: Executes a block of logic based on the evaluation of a condition.
+- **Use Case**: Apply specific logic when a condition is true; otherwise, execute alternative logic.
+- **Example**
+  - For a JSON schema, if the `age` field is greater than 18, map "adult"; else, map "minor."
+
+---
+
+## **2. For-Each Condition**
+
+- **Description**: Iterates over a JSON array and applies a specific mapping to each element.
+- **Use Case**: Transform and map data for each item in a JSON list.
+- **Example**
+  - For each item in an order array, map the `itemName` and `price` to the target system.
+
+---
+
+## **3. Switch Condition**
+
+- **Description**: Executes a block of logic based on multiple conditions (cases).
+- **Use Case**: Handle scenarios where multiple outcomes are possible for JSON field values.
+- **Example**
+  - For a JSON field `role`
+    - Map "Admin" if the role is `1`.
+    - Map "Editor" if the role is `2`.
+    - Map "Viewer" if the role is `3`.

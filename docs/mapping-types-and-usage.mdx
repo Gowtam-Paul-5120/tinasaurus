@@ -1,0 +1,138 @@
+---
+title: Mapping Types and Usage
+---
+
+# Mapping Types and Usage
+
+The platform supports various mapping techniques to facilitate efficient data transformation and extraction from **JSON schemas**. The supported types include **Simple Path Access**, **Functions with Arguments**, **Relative Mapping**, **Filters**, and **Combined Expressions**.
+
+---
+
+## **1. Simple Path Access**
+
+Access specific properties within the JSON schema using absolute paths.
+
+**Examples**
+
+- **Accessing a property**
+
+  ```plaintext
+  plaintextCopy code$.UserDetails.name
+  ```
+
+  Accesses the `name` property of the `UserDetails` object.
+
+- **Accessing nested properties**
+
+  ```plaintext
+  plaintextCopy code$.Order.items.productId
+  ```
+
+  Accesses the `productId` property of an object within `Order.items`.
+
+---
+
+## **2. Functions with Arguments**
+
+Perform operations like concatenation, summation, or finding the maximum value using built-in functions.
+
+**Examples**
+
+- **Concatenation of strings**
+
+  ```plaintext
+  plaintextCopy codeconcat($.Customer.firstName, $.Customer.lastName)
+  ```
+
+  Combines the `firstName` and `lastName` properties of the `Customer`.
+
+- **Summing numerical values**
+
+  ```plaintext
+  plaintextCopy codesum($.Invoice.totalAmount, $.Invoice.tax)
+  ```
+
+  Adds the `totalAmount` and `tax` values of the `Invoice`.
+
+- **Finding the maximum value**
+
+  ```plaintext
+  plaintextCopy codemax($.Grades.math, $.Grades.science, $.Grades.english)
+  ```
+
+  Finds the maximum score among `math`, `science`, and `english`.
+
+---
+
+## **3. Relative Mapping**
+
+Map children of an object using relative paths.
+
+**Examples**
+
+- **Mapping nested properties**
+
+  ```plaintext
+  plaintextCopy code$.StudentDetails
+  .grades.math
+  .grades.english
+  .grades.history
+  ```
+
+  Maps all the grade properties under `StudentDetails.grades` to a corresponding target node.
+
+- **Using a relative path in a filter**
+
+  ```plaintext
+  plaintextCopy code.grades[subject='math'].score
+  ```
+
+  Accesses the `score` property for the `math` subject from a relative node.
+
+---
+
+## **4. Filters**
+
+Use filters to conditionally select values or index arrays.
+
+**Examples**
+
+- **Selecting array elements by condition**
+
+  ```plaintext
+  plaintextCopy code$.Orders[status='shipped']
+  ```
+
+  Filters the `Orders` array to return elements where `status` is `shipped`.
+
+- **Accessing a specific index in an array**
+
+  ```plaintext
+  plaintextCopy code$.Products[2]
+  ```
+
+  Accesses the third element (0-based index) in the `Products` array.
+
+---
+
+## **5. Combined Expressions**
+
+Combine multiple mapping features into a single expression for complex transformations.
+
+**Examples**
+
+- **Math with a filter condition**
+
+  ```plaintext
+  plaintextCopy codesum($.Items[.type='electronics'].price, $.Items[.type='appliances'].price)
+  ```
+
+  Calculates the total price of items in the `Items` array where `type` is `electronics` or `appliances`.
+
+- **Concatenating a value and its parent**
+
+  ```plaintext
+  plaintextCopy codeconcat($.Category.name, $.Details.suffix)
+  ```
+
+  Combines the `name` property of the `Category` with a `suffix` from `Details`.
