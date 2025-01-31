@@ -162,9 +162,14 @@ const DocsCollection = {
       isBody: true,
     },
   ],
+  // ui: {
+  //   router: ({ document }) => {
+  //     return `/docs/${document._sys.filename}`;
+  //   },
+  // },
   ui: {
-    router: ({ document }) => {
-      return `/docs/${document._sys.filename}`;
+    router: (props) => {
+      return "/";
     },
   },
 };

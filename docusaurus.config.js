@@ -112,10 +112,7 @@ const config = {
             const baseUrl =
               process.env.NEXT_PUBLIC_WEBSITE_URL ||
               "https://platform-nx-doc.vercel.app/";
-            return `${baseUrl}admin/#/collections/edit/doc/${docPath.replace(
-              /\.mdx?$/,
-              ""
-            )}`;
+            return `${baseUrl}admin/#/~/docs/${docPath.replace(/\.mdx?$/, "")}`;
           },
         },
         blog: {
