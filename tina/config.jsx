@@ -160,9 +160,13 @@ const DocsCollection = {
       name: "body",
       label: "Body",
       isBody: true,
-      templates: [...MDXTemplates],
     },
   ],
+  ui: {
+    router: ({ document }) => {
+      return `/docs/${document._sys.filename}`;
+    },
+  },
 };
 
 const DocLinkTemplate = {
@@ -817,6 +821,11 @@ const PagesCollection = {
       templates: [...MDXTemplates],
     },
   ],
+  ui: {
+    router: (props) => {
+      return "/";
+    },
+  },
 };
 
 export default defineConfig({

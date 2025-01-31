@@ -108,7 +108,15 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: docusaurusData.url + "/admin/#/collections/doc",
+          editUrl: ({ versionDocsDirPath, docPath }) => {
+            const baseUrl =
+              process.env.NEXT_PUBLIC_WEBSITE_URL ||
+              "https://platform-nx-doc.vercel.app/";
+            return `${baseUrl}admin/#/collections/edit/doc/${docPath.replace(
+              /\.mdx?$/,
+              ""
+            )}`;
+          },
         },
         blog: {
           showReadingTime: true,
