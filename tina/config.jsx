@@ -128,52 +128,6 @@ const PostCollection = {
   ],
 };
 
-const DocsCollection = {
-  name: "doc",
-  label: "Docs",
-  path: "docs",
-  format: "mdx",
-  fields: [
-    {
-      type: "string",
-      name: "title",
-      label: "Title",
-      isTitle: true,
-      required: true,
-    },
-    {
-      type: "string",
-      name: "description",
-      label: "Description",
-    },
-    {
-      label: "Tags",
-      name: "tags",
-      type: "string",
-      list: true,
-      ui: {
-        component: "tags",
-      },
-    },
-    {
-      type: "rich-text",
-      name: "body",
-      label: "Body",
-      isBody: true,
-    },
-  ],
-  // ui: {
-  //   router: ({ document }) => {
-  //     return `/docs/${document._sys.filename}`;
-  //   },
-  // },
-  ui: {
-    router: (props) => {
-      return "/";
-    },
-  },
-};
-
 const DocLinkTemplate = {
   name: "doc",
   label: "Doc Link",
@@ -833,6 +787,203 @@ const PagesCollection = {
   },
 };
 
+const DocsCollection = {
+  name: "doc",
+  label: "Docs",
+  path: "docs",
+  format: "mdx",
+  fields: [
+    {
+      type: "string",
+      name: "title",
+      label: "Title",
+      isTitle: true,
+      required: true,
+    },
+    {
+      type: "string",
+      name: "description",
+      label: "Description",
+    },
+    {
+      label: "Tags",
+      name: "tags",
+      type: "string",
+      list: true,
+      ui: {
+        component: "tags",
+      },
+    },
+    {
+      type: "rich-text",
+      name: "body",
+      label: "Body",
+      isBody: true,
+      templates: [
+        {
+          name: "Callout",
+          label: "Callout",
+          ui: {
+            defaultItem: {
+              type: "default",
+              text: "Lorem ipsum dolor sit amet.",
+            },
+          },
+          fields: [
+            {
+              name: "type",
+              label: "Type",
+              type: "string",
+              options: ["default", "warning", "error"],
+            },
+            {
+              name: "text",
+              label: "Text",
+              type: "string",
+            },
+          ],
+        },
+        {
+          name: "Button",
+          label: "Button",
+          ui: {
+            defaultItem: {
+              type: "primary",
+              text: "Learn More",
+              url: "https://tina.io",
+            },
+          },
+          fields: [
+            {
+              name: "type",
+              label: "Type",
+              type: "string",
+              options: ["primary", "success", "danger", "neutral"],
+            },
+            {
+              name: "text",
+              label: "Text",
+              type: "string",
+            },
+            {
+              name: "url",
+              label: "Url",
+              type: "string",
+            },
+          ],
+        },
+        {
+          name: "VideoPlayer",
+          label: "VideoPlayer",
+          fields: [
+            {
+              name: "url",
+              label: "Video URL",
+              type: "string",
+            },
+          ],
+        },
+        {
+          name: "Hero",
+          label: "Hero",
+          ui: {
+            defaultItem: {
+              backgroundImageUrl:
+                "https://res.cloudinary.com/tina-demos/image/upload/v1634760332/flyingTina_dfh69x.png",
+              slogan: "Eat your food!",
+              teaser: "Lorem ipsum dolor sit amet.",
+              btnUrl: "https://tina.io",
+              btnTxt: "Learn More",
+            },
+          },
+          fields: [
+            {
+              name: "backgroundImageUrl",
+              label: "Background Image",
+              type: "image",
+            },
+            {
+              name: "slogan",
+              label: "Title",
+              type: "string",
+            },
+            {
+              name: "teaser",
+              label: "Teaser",
+              type: "string",
+              ui: {
+                component: "textarea",
+              },
+            },
+            {
+              name: "btnUrl",
+              label: "Button Url",
+              type: "string",
+            },
+            {
+              name: "btnTxt",
+              label: "Button Text",
+              type: "string",
+            },
+          ],
+        },
+        {
+          name: "FeatureSection",
+          label: "Feature",
+          ui: {
+            defaultItem: {
+              featureList: [
+                {
+                  image: "http://placehold.it/48x48",
+                  title: "Hello, World",
+                  desc: "Lorem ipsum dolor sit amet.",
+                },
+              ],
+            },
+          },
+          fields: [
+            {
+              type: "object",
+              name: "featureList",
+              label: "Feature List",
+              list: true,
+              fields: [
+                {
+                  name: "image",
+                  label: "Feature Image",
+                  type: "image",
+                },
+                {
+                  name: "title",
+                  label: "Feature Title",
+                  type: "string",
+                },
+                {
+                  name: "desc",
+                  label: "Feature Text",
+                  type: "string",
+                  ui: {
+                    component: "textarea",
+                  },
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  ],
+  ui: {
+    router: ({ document, collection }) => {
+      if (["docs"].includes(collection.name)) {
+        return `/docs/${document._sys.filename}`;
+      }
+
+      return undefined;
+    },
+  },
+};
+
 export default defineConfig({
   branch,
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID, // Get this from tina.io
@@ -845,6 +996,11 @@ export default defineConfig({
     tina: {
       mediaRoot: "img",
       publicFolder: "static",
+    },
+  },
+  admin: {
+    auth: {
+      enableOAuth: true,
     },
   },
   schema: {
